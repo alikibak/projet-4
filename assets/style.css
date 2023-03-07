@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --first_color: #9356DC;
+    --second_color: #FF79DA;
+    --third_color: #99E2D0;
+}
+
+.text_shrikhand {
+    font-family: "Shrikhand", sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: oblique;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* header */
+
+.box_header {
+    height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    position: relative;
+}
+
+.box_logo {
+    margin-top: 10px;
+    width: 162px;
+    height: 44px;
+}
+
+.logo {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.box_place {
+    display: flex;
+    background-color: #EAEAEA;
+    height: 50px;
+    gap: 17px;
+    color: #353535;;
+}
+
+.box_presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F7F7F7;
+    min-height: 287px;
+    text-align: center;
+    padding: 0 2em 0 2em;
+}
+
+.button {
+    color: white;
+    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 13px 18.75px;
+}
+
+.button:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+}
+
+.functioning h2 {
+    margin: 48px auto 26px 20px ;
+}
+
+.functioning_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.button_functioning {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 322.49px;
+    height: 72.38px;
+    background-color: #F7F7F7;
+    margin: auto;
+    flex: 0 0 auto;
+}
+
+.button_functionning-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    left: -11px;
+    color: white;
+}
+
+.button_functionning-2 {
+    font-size: 20px;
+    color: #7E7E7E;
+}
+
+.test {
+    display: flex;
+    gap: 27px;
+    margin-left: 10px;
+}
