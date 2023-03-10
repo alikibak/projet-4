@@ -10,6 +10,22 @@
     --third_color: #99E2D0;
 }
 
+#La_palette_du_goût {
+    background-image: url("./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+#La_note_enchantée {
+    background-image: url("./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+#A_la_française {
+    background-image: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+#le_délice_des_sens{
+    background-image: url("./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
 .text_shrikhand {
     font-family: "Shrikhand", sans-serif;
 }
@@ -32,6 +48,11 @@ h2 {
 }
 
 h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+h4 {
     font-size: 18px;
     font-weight: 300;
 }
@@ -40,6 +61,13 @@ p {
     font-size: 16px;
     font-weight: 500;
 }
+
+.fa-heart {
+    font-size: 21px
+}
+
+
+
 
 /* header */
 
@@ -94,14 +122,17 @@ p {
     opacity: 0.85;
 }
 
-.functioning h2 {
-    margin: 48px auto 26px 20px ;
+.functioning {
+    padding-top: 48px;
+    padding-bottom: 68px;
 }
 
 .functioning_flex {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .button_functioning {
@@ -112,11 +143,9 @@ p {
     width: 322.49px;
     height: 72.38px;
     background-color: #F7F7F7;
-    margin: auto;
-    flex: 0 0 auto;
 }
 
-.button_functionning-1 {
+.button_functioning-1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,13 +158,102 @@ p {
     color: white;
 }
 
-.button_functionning-2 {
+.button_functioning-2 {
     font-size: 20px;
     color: #7E7E7E;
 }
 
-.test {
+.button_functioning-item {
     display: flex;
     gap: 27px;
     margin-left: 10px;
+}
+
+.restaurant {
+    background-color: #F7F7F7;
+    padding-top: 54px;
+    padding-bottom: 64px;
+}
+
+.restaurant_flex {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.restaurant_flex h2 {
+    margin-bottom: 26px;
+}
+
+.box_dish {
+    width: 355px;
+    height: 251px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.box_dish-image {
+    width: 100%;
+    height: 174px;  
+    background-size: cover;
+    background-position: center;
+}
+
+.icone_new {
+    display: flex;
+    position: relative;
+    top: 13px;
+    left: 246.31px;
+    width: 80px;
+    height: 29px;
+    background-color: #99E2D0;
+    color: #008766;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
+
+.icone_new p {
+    font-size: 14px;
+}
+
+.box_dish-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    margin-left: 12.81px;
+    margin-right: 25px;
+}
+
+.box_dish-caption h3{
+    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: #353535;
+    color: white;
+    height: 197px;
+}
+
+.footer_flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 25px;
+    padding-top: 22px;
+    gap: 16px;
+}
+
+.list_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.list_footer span {
+    display: flex;
+    gap: 11px;
 }
