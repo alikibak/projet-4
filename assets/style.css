@@ -62,14 +62,46 @@ p {
     font-weight: 500;
 }
 
-.fa-heart {
-    font-size: 21px
+a {
+    color: white;
+    text-decoration: none;
 }
 
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #99E2D0;
+    border-radius: 50%;
+    border-top: 16px solid #9356DC ;
+    animation: spin 2s linear infinite;
+}
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
+#page {
+    display: none;
+}
 
-/* header */
+.animate-bottom {
+    position: relative;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+                                        /* header */
 
 .box_header {
     height: 63px;
@@ -143,6 +175,17 @@ p {
     width: 322.49px;
     height: 72.38px;
     background-color: #F7F7F7;
+    transition: 0.3s;
+}
+
+.button_functioning:hover {
+    background-color: #F5EDFF;
+    transition: 0.3s;
+}
+
+.button_functioning:hover i {
+    color: #9356DC;
+    transition: 0.3s;
 }
 
 .button_functioning-1 {
@@ -230,6 +273,48 @@ p {
 
 .box_dish-caption h3{
     margin-bottom: 5px;
+}
+
+.heart {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.heart input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.coeur{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    clip-path:path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+    transition: 1s;
+}
+
+input:checked + .coeur {
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);;
+    clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+    animation-name: like;
+    animation-duration: 1s;
+}
+
+@keyframes like {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%
+    }
 }
 
 .footer {
