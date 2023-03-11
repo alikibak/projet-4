@@ -78,7 +78,13 @@ a {
     border: 16px solid #99E2D0;
     border-radius: 50%;
     border-top: 16px solid #9356DC ;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite, fade 3s cubic-bezier(1,-1.21,1,.07) ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0% { opacity: 1;}
+    100% {opacity: 0;}
 }
 
 @keyframes spin {
@@ -87,13 +93,14 @@ a {
 }
 
 #page {
-    display: none;
+    opacity: 0;
 }
 
 .animate-bottom {
     position: relative;
-    animation-name: animatebottom;
-    animation-duration: 1s
+    animation: animatebottom 1s linear;
+    animation-delay: 3s;
+    animation-fill-mode: forwards
 }
 
 @keyframes animatebottom { 
