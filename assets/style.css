@@ -163,6 +163,7 @@ a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     padding: 13px 18.75px;
+    min-width: 186px;
 }
 
 .button:hover {
@@ -384,16 +385,17 @@ input:checked + .coeur {
     position: relative;
     z-index: 1;
     border-radius: 40px 40px 0 0;
-    margin-top: 220px;
+    margin: 220px auto 0 auto; 
     background-color: #F7F7F7;
+    max-width: 1055px;
 }
 
 .title_menu {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 32px;
-    padding-right: 20px
+    gap: 23px;
 }
 
 .plat {
@@ -404,6 +406,7 @@ input:checked + .coeur {
     padding-top: 42px;
     padding-bottom: 40px;
 }
+
 
 .box_menu {
     display: flex;
@@ -448,6 +451,23 @@ input:checked + .coeur {
     height: 69px;
     text-overflow: ellipsis;
     overflow: hidden;
+    background-color: white;
+    opacity: 0;
+}
+
+.plat:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.animate-right {
+    position: relative;
+    animation: animateright 1s linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes animateright { 
+    from{ right:-100px; opacity:0 } 
+    to{ right:0; opacity:1 }
 }
 
 .price {
@@ -455,27 +475,17 @@ input:checked + .coeur {
 }
 
 .add {
-    display: none;
     position: relative;
     bottom: -12px;
-    right: -118px;
-    width: 59px;
+    right: -18px;
+    width: 0;
     height: 69px;
     background-color: #99E2D0;
     border-radius: 0px 15px 15px 0px;
+    transition: width 0.5s ease-in-out;
 }
 
 input:checked + .add {
-    display: flex;
-    animation: addition 0.5s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes addition {
-    from {
-        right: -118px;
-    }
-    to {
-        right: -18px;
-    }
+    transition: width 0.5s ease-in-out;
+    width: 59px;
 }
