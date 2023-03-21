@@ -163,6 +163,7 @@ a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     padding: 13px 18.75px;
+    min-width: 186px;
 }
 
 .button:hover {
@@ -219,6 +220,7 @@ a {
     height: 24px;
     left: -11px;
     color: white;
+    font-size: 14.18px;
 }
 
 .button_functioning-2 {
@@ -289,6 +291,11 @@ a {
     height: 77px;
     margin-left: 12.81px;
     margin-right: 25px;
+    color: black;
+}
+
+.box_dish-text h4 {
+    font-size: 17px;
 }
 
 .box_dish-caption h3{
@@ -353,6 +360,10 @@ input:checked + .coeur {
     gap: 16px;
 }
 
+.box_logo_footer h4 {
+    font-weight: 400;
+}
+
 .list_footer {
     display: flex;
     flex-direction: column;
@@ -384,16 +395,18 @@ input:checked + .coeur {
     position: relative;
     z-index: 1;
     border-radius: 40px 40px 0 0;
-    margin-top: 220px;
+    margin: 220px auto 0 auto; 
     background-color: #F7F7F7;
+    max-width: 1055px;
 }
 
 .title_menu {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 32px;
-    padding-right: 20px
+    gap: 36px;
+    padding-right: 15px;
 }
 
 .plat {
@@ -405,12 +418,37 @@ input:checked + .coeur {
     padding-bottom: 40px;
 }
 
+
 .box_menu {
     display: flex;
     flex-direction: column;
     gap: 12px;    
     width: 90%;
     align-items: center;
+    opacity: 0;
+}
+
+.box_menu:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.box_menu:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.box_menu:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.animate-right {
+    position: relative;
+    animation: animateright 1s linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes animateright { 
+    from{ right:-100px; opacity:0 } 
+    to{ right:0; opacity:1 }
 }
 
 .align_menu {
@@ -448,6 +486,24 @@ input:checked + .coeur {
     height: 69px;
     text-overflow: ellipsis;
     overflow: hidden;
+    background-color: white;
+}
+
+.caption_food {
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1 1 0;
+}
+
+
+.caption_food h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.caption_food h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .price {
@@ -455,27 +511,103 @@ input:checked + .coeur {
 }
 
 .add {
-    display: none;
     position: relative;
     bottom: -12px;
-    right: -118px;
-    width: 59px;
+    right: -18px;
+    width: 0;
     height: 69px;
     background-color: #99E2D0;
     border-radius: 0px 15px 15px 0px;
+    transition: width 0.5s ease-in-out;
 }
 
 input:checked + .add {
-    display: flex;
-    animation: addition 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+    transition: width 0.5s ease-in-out;
+    width: 59px;
 }
 
-@keyframes addition {
-    from {
-        right: -118px;
+
+                    /* desktop */
+
+@media (min-width: 1024px) {
+    .box_header {
+        height: 96px;
     }
-    to {
-        right: -18px;
+
+    .arrow {
+        top: 40px;
+        left: 75px;
+    }
+
+    .box_logo {
+        width: 200px;
+        height: 54px;
+    }
+
+    .box_presentation h2 {
+        font-size: 40px;
+    }
+
+    .functioning {
+    padding-top: 50px;
+    padding-bottom: 80.62px;
+    }
+
+    .margin_fonctionnement h2 {
+        margin-bottom: 28px;
+    }
+
+    .functioning_flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36.51px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .restaurant {
+        background-color: #F7F7F7;
+        padding-top: 47px;
+        padding-bottom: 82px;
+        padding-left: 190.04px;
+        overflow: hidden;
+    }
+    
+    .restaurant_flex {
+        gap: 32px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .footer {
+        height: 114px;
+    }
+
+    .footer_flex {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 71px;    
+        margin-left: 0;
+        padding-top: 0;
+        padding-right: 120px;
+    }
+
+    .list_footer {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+                                /* menu */
+
+    .menu {
+        margin: 343px auto 0 auto; 
+    }
+
+    .image_menu {
+        height: 406px;
+    }
+
+    .title_menu {
+        padding-top: 51px;
     }
 }
