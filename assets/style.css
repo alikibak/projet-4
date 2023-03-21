@@ -220,6 +220,7 @@ a {
     height: 24px;
     left: -11px;
     color: white;
+    font-size: 14.18px;
 }
 
 .button_functioning-2 {
@@ -290,6 +291,11 @@ a {
     height: 77px;
     margin-left: 12.81px;
     margin-right: 25px;
+    color: black;
+}
+
+.box_dish-text h4 {
+    font-size: 17px;
 }
 
 .box_dish-caption h3{
@@ -354,6 +360,10 @@ input:checked + .coeur {
     gap: 16px;
 }
 
+.box_logo_footer h4 {
+    font-weight: 400;
+}
+
 .list_footer {
     display: flex;
     flex-direction: column;
@@ -395,7 +405,8 @@ input:checked + .coeur {
     align-items: center;
     justify-content: center;
     padding-top: 32px;
-    gap: 23px;
+    gap: 36px;
+    padding-right: 15px;
 }
 
 .plat {
@@ -414,6 +425,30 @@ input:checked + .coeur {
     gap: 12px;    
     width: 90%;
     align-items: center;
+    opacity: 0;
+}
+
+.box_menu:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.box_menu:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.box_menu:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.animate-right {
+    position: relative;
+    animation: animateright 1s linear;
+    animation-fill-mode: forwards
+}
+
+@keyframes animateright { 
+    from{ right:-100px; opacity:0 } 
+    to{ right:0; opacity:1 }
 }
 
 .align_menu {
@@ -452,22 +487,23 @@ input:checked + .coeur {
     text-overflow: ellipsis;
     overflow: hidden;
     background-color: white;
-    opacity: 0;
 }
 
-.plat:nth-child(1) {
-    animation-delay: 2s;
+.caption_food {
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1 1 0;
 }
 
-.animate-right {
-    position: relative;
-    animation: animateright 1s linear;
-    animation-fill-mode: forwards
+
+.caption_food h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-@keyframes animateright { 
-    from{ right:-100px; opacity:0 } 
-    to{ right:0; opacity:1 }
+.caption_food h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .price {
@@ -488,4 +524,90 @@ input:checked + .coeur {
 input:checked + .add {
     transition: width 0.5s ease-in-out;
     width: 59px;
+}
+
+
+                    /* desktop */
+
+@media (min-width: 1024px) {
+    .box_header {
+        height: 96px;
+    }
+
+    .arrow {
+        top: 40px;
+        left: 75px;
+    }
+
+    .box_logo {
+        width: 200px;
+        height: 54px;
+    }
+
+    .box_presentation h2 {
+        font-size: 40px;
+    }
+
+    .functioning {
+    padding-top: 50px;
+    padding-bottom: 80.62px;
+    }
+
+    .margin_fonctionnement h2 {
+        margin-bottom: 28px;
+    }
+
+    .functioning_flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36.51px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .restaurant {
+        background-color: #F7F7F7;
+        padding-top: 47px;
+        padding-bottom: 82px;
+        padding-left: 190.04px;
+        overflow: hidden;
+    }
+    
+    .restaurant_flex {
+        gap: 32px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .footer {
+        height: 114px;
+    }
+
+    .footer_flex {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 71px;    
+        margin-left: 0;
+        padding-top: 0;
+        padding-right: 120px;
+    }
+
+    .list_footer {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+                                /* menu */
+
+    .menu {
+        margin: 343px auto 0 auto; 
+    }
+
+    .image_menu {
+        height: 406px;
+    }
+
+    .title_menu {
+        padding-top: 51px;
+    }
 }
