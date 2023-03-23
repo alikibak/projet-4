@@ -84,9 +84,9 @@ a {
     width: 120px;
     height: 120px;
     margin: -76px 0 0 -76px;
-    border: 16px solid #99E2D0;
+    border: 16px solid var(--third_color);
     border-radius: 50%;
-    border-top: 16px solid #9356DC ;
+    border-top: 16px solid var(--first_color) ;
     animation: spin 2s linear infinite, fade 3s cubic-bezier(1,-1.21,1,.07) ;
     animation-fill-mode: forwards;
 }
@@ -159,11 +159,12 @@ a {
 
 .button {
     color: white;
-    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: linear-gradient(0deg, var(--first_color) -5.2%, var(--second_color) 110.74%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     padding: 13px 18.75px;
     min-width: 186px;
+    cursor: pointer
 }
 
 .button:hover {
@@ -184,7 +185,7 @@ a {
     align-items: flex-end;
 }
 
-.margin_fonctionnement h2 {
+.margin_functioning h2 {
     margin-bottom: 26px;
 }
 
@@ -197,6 +198,7 @@ a {
     height: 72.38px;
     background-color: #F7F7F7;
     transition: 0.3s;
+    cursor: pointer
 }
 
 .button_functioning:hover {
@@ -205,16 +207,16 @@ a {
 }
 
 .button_functioning:hover i {
-    color: #9356DC;
+    color: var(--first_color);
     transition: 0.3s;
 }
 
-.button_functioning-1 {
+.button_functioning-number {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #9356DC;
+    background-color: var(--first_color);
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -223,7 +225,7 @@ a {
     font-size: 14.18px;
 }
 
-.button_functioning-2 {
+.button_functioning-icone {
     font-size: 20px;
     color: #7E7E7E;
 }
@@ -274,7 +276,7 @@ a {
     left: 246.31px;
     width: 80px;
     height: 29px;
-    background-color: #99E2D0;
+    background-color: var(--third_color);
     color: #008766;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
@@ -302,7 +304,7 @@ a {
     margin-bottom: 5px;
 }
 
-.heart {
+.box_heart {
     position: relative;
     display: inline-block;
     width: 24px;
@@ -317,7 +319,7 @@ input {
     position: absolute;
 }
 
-.coeur{
+.heart{
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -329,8 +331,8 @@ input {
     transition: 1s;
 }
 
-input:checked + .coeur {
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);;
+input:checked + .heart {
+    background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);;
     clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
     animation-name: like;
     animation-duration: 1s;
@@ -345,20 +347,17 @@ input:checked + .coeur {
     }
 }
 
-.footer {
+footer {
     background-color: #353535;
     color: white;
-    height: 197px;
-}
-
-.footer_flex {
+    height: 197px;   
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin-left: 25px;
+    padding-left: 25px;
     padding-top: 22px;
     gap: 16px;
 }
+
 
 .box_logo_footer h4 {
     font-weight: 400;
@@ -418,7 +417,6 @@ input:checked + .coeur {
     padding-bottom: 40px;
 }
 
-
 .box_menu {
     display: flex;
     flex-direction: column;
@@ -469,7 +467,7 @@ input:checked + .coeur {
     left: 0;
     bottom: -6px;
     width: 40px;  
-    border-bottom:3px solid #99E2D0;
+    border-bottom:3px solid var(--third_color);
 }
 
 .box_food {
@@ -516,7 +514,7 @@ input:checked + .coeur {
     right: -18px;
     width: 0;
     height: 69px;
-    background-color: #99E2D0;
+    background-color: var(--third_color);
     border-radius: 0px 15px 15px 0px;
     transition: width 0.5s ease-in-out;
 }
@@ -553,7 +551,7 @@ input:checked + .add {
     padding-bottom: 80.62px;
     }
 
-    .margin_fonctionnement h2 {
+    .margin_functioning h2 {
         margin-bottom: 28px;
     }
 
@@ -579,11 +577,8 @@ input:checked + .add {
         justify-content: flex-start;
     }
 
-    .footer {
+    footer {
         height: 114px;
-    }
-
-    .footer_flex {
         flex-direction: row-reverse;
         align-items: center;
         gap: 71px;    
