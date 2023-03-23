@@ -179,10 +179,11 @@ a {
 
 .functioning_flex {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .margin_functioning h2 {
@@ -556,10 +557,9 @@ input:checked + .add {
     }
 
     .functioning_flex {
-        display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
         gap: 36.51px;
-        justify-content: center;
         align-items: flex-end;
     }
 
