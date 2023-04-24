@@ -370,7 +370,7 @@ footer {
     gap: 7px;
 }
 
-.list_footer span {
+.flex_list-element {
     display: flex;
     gap: 11px;
 }
