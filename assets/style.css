@@ -22,7 +22,7 @@
     background-image: url("./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
-#le_délice_des_sens{
+#le_délice_des_sens {
     background-image: url("./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
@@ -76,19 +76,29 @@ a {
     margin: -76px 0 0 -76px;
     border: 16px solid var(--third_color);
     border-radius: 50%;
-    border-top: 16px solid var(--first_color) ;
-    animation: spin 2s linear infinite, fade 3s cubic-bezier(1,-1.21,1,.07) ;
+    border-top: 16px solid var(--first_color);
+    animation: spin 2s linear infinite, fade 3s cubic-bezier(1, -1.21, 1, .07);
     animation-fill-mode: forwards;
 }
 
 @keyframes fade {
-    0% { opacity: 1;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #page {
@@ -102,12 +112,19 @@ a {
     animation-fill-mode: forwards
 }
 
-@keyframes animatebottom { 
-    from{ bottom:-100px; opacity:0 } 
-    to{ bottom:0; opacity:1 }
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
 
-                                        /* header */
+/* header */
 
 .box_header {
     height: 63px;
@@ -133,7 +150,8 @@ a {
     background-color: #EAEAEA;
     height: 50px;
     gap: 17px;
-    color: #353535;;
+    color: #353535;
+    ;
 }
 
 .box_presentation {
@@ -266,7 +284,7 @@ a {
 .box_dish-image {
     display: block;
     width: 100%;
-    height: 174px;  
+    height: 174px;
     background-size: cover;
     background-position: center;
 }
@@ -302,7 +320,7 @@ a {
     font-size: 17px;
 }
 
-.box_dish-caption h3{
+.box_dish-caption h3 {
     margin-bottom: 5px;
 }
 
@@ -314,7 +332,8 @@ a {
 }
 
 .box_heart-acceuil:hover .heart {
-    background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);;
+    background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);
+    ;
     clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
     animation-name: like;
     animation-duration: 1s;
@@ -327,7 +346,7 @@ input {
     position: absolute;
 }
 
-.heart{
+.heart {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -335,12 +354,13 @@ input {
     right: 0;
     bottom: 0;
     background-color: black;
-    clip-path:path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
+    clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");
     transition: 1s;
 }
 
-input:checked + .heart {
-    background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);;
+input:checked+.heart {
+    background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);
+    ;
     clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
     animation-name: like;
     animation-duration: 1s;
@@ -350,6 +370,7 @@ input:checked + .heart {
     from {
         opacity: 0%;
     }
+
     to {
         opacity: 100%
     }
@@ -358,7 +379,7 @@ input:checked + .heart {
 footer {
     background-color: #353535;
     color: white;
-    height: 197px;   
+    height: 197px;
     display: flex;
     flex-direction: column;
     padding-left: 25px;
@@ -382,7 +403,7 @@ footer {
     gap: 11px;
 }
 
-                                    /* menu */
+/* menu */
 
 .arrow {
     position: absolute;
@@ -402,7 +423,7 @@ footer {
     position: relative;
     z-index: 1;
     border-radius: 40px 40px 0 0;
-    margin: 220px auto 0 auto; 
+    margin: 220px auto 0 auto;
     background-color: #F7F7F7;
     max-width: 1055px;
 }
@@ -428,7 +449,7 @@ footer {
 .box_menu {
     display: flex;
     flex-direction: column;
-    gap: 12px;    
+    gap: 12px;
     width: 90%;
     align-items: center;
     opacity: 0;
@@ -452,9 +473,16 @@ footer {
     animation-fill-mode: forwards
 }
 
-@keyframes animateright { 
-    from{ right:-100px; opacity:0 } 
-    to{ right:0; opacity:1 }
+@keyframes animateright {
+    from {
+        right: -100px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
+    }
 }
 
 .align_menu {
@@ -463,7 +491,7 @@ footer {
     width: 100%;
 }
 
-.align_menu > p{
+.align_menu>p {
     font-size: 15px;
     font-weight: 300;
 }
@@ -475,12 +503,12 @@ footer {
 
 .border_green:after {
     display: block;
-    content : "";
+    content: "";
     position: relative;
     left: 0;
     bottom: -6px;
-    width: 40px;  
-    border-bottom:3px solid var(--third_color);
+    width: 40px;
+    border-bottom: 3px solid var(--third_color);
 }
 
 .box_food {
@@ -511,14 +539,14 @@ footer {
     flex: 1 1 0;
 }
 
-.caption_food > h2 {
+.caption_food>h2 {
     font-size: 18px;
     font-weight: 500;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.caption_food > h3{
+.caption_food>h3 {
     font-size: 15px;
     font-weight: 300;
     overflow: hidden;
@@ -544,7 +572,7 @@ footer {
 
 
 
-                    /* desktop */
+/* desktop */
 
 @media (min-width: 1024px) {
     .box_header {
@@ -566,8 +594,8 @@ footer {
     }
 
     .functioning {
-    padding-top: 50px;
-    padding-bottom: 80.62px;
+        padding-top: 50px;
+        padding-bottom: 80.62px;
     }
 
     .margin_functioning h2 {
@@ -588,7 +616,7 @@ footer {
         padding-left: 190.04px;
         overflow: hidden;
     }
-    
+
     .restaurant_flex {
         gap: 32px;
         flex-wrap: nowrap;
@@ -603,7 +631,7 @@ footer {
         height: 114px;
         flex-direction: row-reverse;
         align-items: center;
-        gap: 71px;    
+        gap: 71px;
         margin-left: 0;
         padding-top: 0;
         padding-right: 120px;
@@ -614,10 +642,10 @@ footer {
         gap: 40px;
     }
 
-                                /* menu */
+    /* menu */
 
     .menu {
-        margin: 343px auto 0 auto; 
+        margin: 343px auto 0 auto;
     }
 
     .image_menu {
