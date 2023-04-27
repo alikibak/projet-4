@@ -331,11 +331,11 @@ a {
     cursor: pointer;
 }
 
-.heart_empty {
+.empty_heart {
     font-size: 24px;
 }
 
-.heart_full {
+.full_heart {
     position: relative;
     top: -25px;
     left: 0px;
@@ -349,12 +349,12 @@ a {
     -moz-text-fill-color: transparent;
 }
 
-.box_heart:hover .heart_full {
+.box_heart:hover .full_heart {
     transition: opacity 0.3s linear;
     opacity: 1;
 }
 
-.box_heart:hover .heart_empty {
+.box_heart:hover .empty_heart {
     background: linear-gradient(200.64deg, var(--first_color) -5.2%, var(--second_color) 110.74%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
